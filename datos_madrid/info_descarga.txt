@@ -1,0 +1,6 @@
+Datos de OpenStreetMap (© colaboradores de OpenStreetMap, licencia ODbL)
+Descargados el 28/09/2026 09:59
+Distritos: 21
+Barrios: 131
+Tramos de calle: 51945
+Kilómetros de calle: 4056.9
