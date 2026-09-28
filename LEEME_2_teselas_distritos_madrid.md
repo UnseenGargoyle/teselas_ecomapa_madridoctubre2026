@@ -1,7 +1,7 @@
 # Teselas de trabajo por distrito de Madrid (paso 2 de 2)
 
-**Script:** `teselas\_distritos\_madrid.py`
-**Autoría:** Diana Damas / GargolaHost
+**Script:** `teselas\_distritos\_madrid.py`  
+**Autoría:** Diana Damas / GargolaHost  
 **Contexto:** Ecomapeo de [ecomapa.org](https://ecomapa.org), 3 y 4 de octubre de 2026, municipio de Madrid
 
 Este script divide un distrito de Madrid en **teselas**: zonas de trabajo de unos **3 km de acera** cada una, numeradas y con la lista de calles que incluyen. Sirve para repartir el territorio entre las personas voluntarias del ecomapeo.
@@ -27,7 +27,7 @@ Una tesela es un conjunto de calles **contiguas** (que se tocan entre sí) dentr
 * **Límites:** las teselas nunca cruzan el límite de un barrio.
 * **Calles largas:** se parten por tramos entre cruces, de modo que una avenida larga puede repartirse entre varias teselas.
 * **Forma:** el script empieza cada tesela por el borde del barrio y va añadiendo los tramos conectados más cercanos, para que salgan zonas compactas y fáciles de recorrer.
-* **Numeración:** por barrio, con el código de tres letras del barrio y un número (ACA-01, ACA-02... para Acacias). Dentro de cada barrio se numeran de norte a sur y de oeste a este, como se lee un texto.
+* **Numeración:** por barrio, con el código de tres letras del barrio y un número (LAS-01, LAS-02... para Las Acacias). Las letras se toman del nombre del barrio en OpenStreetMap, incluido el artículo si lo tiene. Dentro de cada barrio se numeran de norte a sur y de oeste a este, como se lee un texto.
 
 \---
 
@@ -37,7 +37,7 @@ Si ya seguiste la guía del primer script, **lo tienes todo** y puedes pasar a *
 
 Si no, necesitas, en este orden:
 
-1. **Los scripts descargados y extraídos.** Entra en https://github.com/UnseenGargoyle/teselas\_ecomapa\_madridoctubre2026, pulsa el botón verde **Code**, después **Download ZIP**, y en tu carpeta de Descargas haz clic derecho sobre el ZIP y elige **Extraer todo**. Los dos scripts deben estar en la misma carpeta.
+1. **Los scripts descargados y extraídos.** Entra en [https://github.com/UnseenGargoyle/teselas\_ecomapa\_madridoctubre2026](https://github.com/UnseenGargoyle/teselas_ecomapa_madridoctubre2026), pulsa el botón verde **Code**, después **Download ZIP**, y en tu carpeta de Descargas haz clic derecho sobre el ZIP y elige **Extraer todo**. Los dos scripts deben estar en la misma carpeta.
 2. **Python instalado.** Descárgalo desde [python.org/downloads](https://www.python.org/downloads/) (versión 3.11 o superior) y, al instalarlo, marca la casilla **"Add python.exe to PATH"**.
 3. **Las librerías.** Abre PowerShell en la carpeta de los scripts (ver abajo) y ejecuta:
 
@@ -85,7 +85,7 @@ Puedes ejecutarlo tantas veces como quieras y para tantos distritos como necesit
 
 \---
 
-## Qué archivos se generan
+## Qué obtienes
 
 Tres archivos en la carpeta de los scripts. Todos llevan en el nombre el distrito y la **fecha y hora** de creación (año, mes, día, hora y minuto), por ejemplo `20260928\_09\_01` para el 28 de septiembre de 2026 a las 9:01.
 
@@ -94,7 +94,7 @@ Tres archivos en la carpeta de los scripts. Todos llevan en el nombre el distrit
 Se abre con **doble clic** en cualquier navegador (Edge, Chrome, Firefox). Necesita conexión a internet solo para cargar el fondo del mapa.
 
 * Cada tesela tiene su color, y sus calles se pintan de ese color.
-* Cada tesela lleva una etiqueta con su código (ACA-01...).
+* Cada tesela lleva una etiqueta con su código (LAS-01...).
 * Al pasar el ratón sobre una calle, se resalta y muestra su tesela, nombre, barrio y metros de calle y de acera.
 * Con el icono de capas (arriba a la derecha) puedes mostrar u ocultar los límites de barrio, los códigos de tesela y los nombres de los barrios.
 
@@ -152,19 +152,21 @@ Si quieres teselas más grandes o más pequeñas:
 |`ModuleNotFoundError: No module named '...'`|Faltan librerías|Ejecuta la línea de instalación de librerías del apartado Requisitos|
 |`Número no válido` en el menú|Se ha escrito algo que no es un número de la lista|Escribe solo el número y pulsa Enter|
 |El mapa se abre pero sin fondo|No hay conexión a internet|Las calles y teselas se ven igual; el fondo aparece al conectarse|
-|Una tesela sale muy grande, muy pequeña o dispersa|Calles poco conectadas en esa zona|Revísala en el mapa y ajústala a mano en el reparto, o contacta con nosotras|
+|Una tesela sale muy grande, muy pequeña o dispersa|Calles poco conectadas en esa zona|Revísala en el mapa y ajústala a mano en el reparto, o contacta conmigo|
 
 ## Contacto
 
-Para dudas o aclaraciones, escríbenos a través del formulario de contacto de GargolaHost:
+Para dudas o aclaraciones, escríbeme a través del formulario de contacto de GargolaHost:
 
 [**gargolahost.com/contacto**](https://gargolahost.com/contacto/)
 
-Indica en el asunto **TESELAS ECOMAPEO** para que pueda identificar tu consulta. No publico una dirección de correo electrónico para evitar recibir spam, que ya me llega bastante. :)
+Indica en el asunto **TESELAS ECOMAPEO** para que pueda identificar tu consulta. No publico una dirección de correo electrónico para evitar recibir spam.
 
-Si me escribes por un error, copia y pega el texto completo que aparece en PowerShell: ayuda mucho a encontrar la causa.
+Si me escribes por un error, copia y pega el texto completo que aparece en PowerShell: me ayuda mucho a encontrar la causa.
 
 \---
 
-*Herramienta desarrollada por Diana Damas / GargolaHost para el Ecomapeo de ecomapa.org (Madrid, 3 y 4 de octubre de 2026). Datos © colaboradores de OpenStreetMap, licencia ODbL.*
+*Herramienta desarrollada por Diana Damas / GargolaHost para el Ecomapeo de ecomapa.org (Madrid, 3 y 4 de octubre de 2026). Datos © colaboradores de OpenStreetMap, licencia ODbL.
+
+Licencia. Esta documentación y los scripts descargar\_datos\_madrid.py y teselas\_distritos\_madrid.py se dedican al dominio público mediante CC0 1.0 Universal. Puedes usarlos, copiarlos, modificarlos y compartirlos libremente, incluso con fines comerciales, sin pedir permiso ni citar la autoría. Los datos geográficos incluidos y los que generan los scripts proceden de OpenStreetMap y mantienen su propia licencia, la Open Database License (ODbL): si los compartes o publicas, debes incluir la atribución "© colaboradores de OpenStreetMap".*
 

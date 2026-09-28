@@ -1,7 +1,7 @@
 # Descarga de datos de calles de Madrid (paso 1 de 2)
 
-**Script:** `descargar\_datos\_madrid.py`
-**Autoría:** Diana Damas / GargolaHost
+**Script:** `descargar\_datos\_madrid.py`  
+**Autoría:** Diana Damas / GargolaHost  
 **Contexto:** Ecomapeo de [ecomapa.org](https://ecomapa.org), 3 y 4 de octubre de 2026, municipio de Madrid
 
 Este script es el **primero de dos**. Descarga y guarda en tu ordenador los datos de calles, barrios y distritos de Madrid capital. El segundo script, `teselas\_distritos\_madrid.py`, usa esos datos para dividir un distrito en zonas de trabajo (teselas) y repartirlas entre las personas voluntarias. Tiene su propia guía: `LEEME\_2\_teselas\_distritos\_madrid.md`.
@@ -14,6 +14,8 @@ Esta guía está pensada para personas que **nunca han usado Python** y trabajan
 
 Se conecta a OpenStreetMap, descarga los datos de todo el municipio de Madrid y los guarda en una carpeta de tu ordenador. Solo hay que ejecutarlo **una vez**, o cuando se quieran actualizar los datos (por ejemplo, cada pocos meses).
 
+> \*\*¿Lo necesitas?\*\* El repositorio ya incluye los datos de Madrid descargados en la carpeta `datos\_madrid` (la fecha aparece en el `README.md` y en `datos\_madrid/info\_descarga.txt`). Si te sirven esos datos, \*\*no necesitas este script\*\*: ve directamente a `LEEME\_2\_teselas\_distritos\_madrid.md`. Usa este script solo si quieres datos más recientes.
+
 Una vez descargados, el segundo script trabaja con ellos sin volver a conectarse a internet, lo que es más rápido y garantiza que todas las teselas de todos los distritos parten exactamente de los mismos datos.
 
 ## Qué datos descarga y de dónde
@@ -23,7 +25,7 @@ Todos los datos proceden de **OpenStreetMap**, la base de datos cartográfica li
 |Datos|Descripción|
 |-|-|
 |Distritos|Límites de los 21 distritos de Madrid|
-|Barrios|Límites de los barrios, con el distrito al que pertenecen y un código de tres letras (Acacias: ACA)|
+|Barrios|Límites de los barrios, con el distrito al que pertenecen y un código de tres letras (Las Acacias: LAS)|
 |Calles|Todas las calles del municipio, divididas en tramos de cruce a cruce y asignadas a su barrio|
 
 Se incluyen las calles de tipo principal, secundario, terciario, residencial, peatonal y de coexistencia. Se excluyen autopistas, enlaces, túneles, vías de servicio y caminos peatonales sueltos (por ejemplo, los senderos dentro de los parques).
@@ -36,7 +38,7 @@ Los datos de OpenStreetMap se distribuyen bajo licencia ODbL. Si publicas o comp
 
 ### Paso 1. Descargar los scripts
 
-1. Entra en el repositorio: https://github.com/UnseenGargoyle/teselas\_ecomapa\_madridoctubre2026
+1. Entra en el repositorio: [https://github.com/UnseenGargoyle/teselas\_ecomapa\_madridoctubre2026](https://github.com/UnseenGargoyle/teselas_ecomapa_madridoctubre2026)
 2. Pulsa el botón verde **Code** y después **Download ZIP**.
 3. Busca el archivo ZIP en tu carpeta de Descargas, haz clic derecho sobre él y elige **Extraer todo**.
 4. Mueve la carpeta extraída a un sitio cómodo, por ejemplo `Documentos\\teselas`.
@@ -131,19 +133,21 @@ Con los datos descargados, ya puedes crear las teselas de cualquier distrito con
 |`ModuleNotFoundError: No module named '...'`|Faltan librerías|Repite el paso 4|
 |Avisos de "El servidor ... ha fallado"|Servidor de OpenStreetMap saturado|No hagas nada: el script reintenta solo|
 |`No se ha podido descargar de ningún servidor`|Sin conexión, VPN activa o servidores caídos|Comprueba la conexión, desactiva la VPN si usas una y prueba de nuevo más tarde|
-|En el resumen faltan distritos o alguno tiene 0 barrios|Cambios en los datos de OpenStreetMap|Contacta con nosotras (ver abajo)|
+|En el resumen faltan distritos o alguno tiene 0 barrios|Cambios en los datos de OpenStreetMap|Contacta conmigo (ver abajo)|
 
 ## Contacto
 
-Para dudas o aclaraciones, escríbenos a través del formulario de contacto de GargolaHost:
+Para dudas o aclaraciones, escríbeme a través del formulario de contacto de GargolaHost:
 
 [**gargolahost.com/contacto**](https://gargolahost.com/contacto/)
 
-Indica en el asunto **TESELAS ECOMAPEO** para que podamos identificar tu consulta. No publicamos una dirección de correo electrónico para evitar recibir spam.
+Indica en el asunto **TESELAS ECOMAPEO** para que pueda identificar tu consulta. No publico una dirección de correo electrónico para evitar recibir spam.
 
-Si nos escribes por un error, copia y pega el texto completo que aparece en PowerShell: nos ayuda mucho a encontrar la causa.
+Si me escribes por un error, copia y pega el texto completo que aparece en PowerShell: me ayuda mucho a encontrar la causa.
 
 \---
 
-*Herramienta desarrollada por Diana Damas / GargolaHost para el Ecomapeo de ecomapa.org (Madrid, 3 y 4 de octubre de 2026). Datos © colaboradores de OpenStreetMap, licencia ODbL.*
+*Herramienta desarrollada por Diana Damas / GargolaHost para el Ecomapeo de ecomapa.org (Madrid, 3 y 4 de octubre de 2026). Datos © colaboradores de OpenStreetMap, licencia ODbL.
+
+Licencia. Esta documentación y los scripts descargar\_datos\_madrid.py y teselas\_distritos\_madrid.py se dedican al dominio público mediante CC0 1.0 Universal. Puedes usarlos, copiarlos, modificarlos y compartirlos libremente, incluso con fines comerciales, sin pedir permiso ni citar la autoría. Los datos geográficos incluidos y los que generan los scripts proceden de OpenStreetMap y mantienen su propia licencia, la Open Database License (ODbL): si los compartes o publicas, debes incluir la atribución "© colaboradores de OpenStreetMap".*
 

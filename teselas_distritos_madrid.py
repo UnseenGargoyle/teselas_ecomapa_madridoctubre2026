@@ -1,3 +1,20 @@
+# SPDX-License-Identifier: CC0-1.0
+#
+# Diana Damas / GargolaHost, 2026
+# Para el Ecomapeo de ecomapa.org (Madrid, 3 y 4 de octubre de 2026).
+#
+# Este script se dedica al dominio público mediante CC0 1.0 Universal.
+# Puedes copiarlo, modificarlo, distribuirlo y usarlo, incluso con fines
+# comerciales, sin pedir permiso ni citar la autoría.
+# Texto completo: https://creativecommons.org/publicdomain/zero/1.0/deed.es
+#
+# Los datos geográficos que descarga o utiliza proceden de OpenStreetMap
+# y están sujetos a la Open Database License (ODbL). Al compartirlos o
+# publicar resultados basados en ellos, hay que incluir la atribución
+# "© colaboradores de OpenStreetMap".
+
+
+
 """
 Crea teselas de unos 3 km de acera para el distrito de Madrid que se elija,
 a partir de los datos guardados por descargar_datos_madrid.py
